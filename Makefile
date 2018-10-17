@@ -6,6 +6,9 @@ sphinx:
 	sphinx-apidoc -f -o source/generated $(packages) && \
 	make html
 
+lint:
+	flake8 example_package
+
 ghpages:
 	-git checkout gh-pages && \
 	mv docs/build/html new-docs && \

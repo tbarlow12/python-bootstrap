@@ -26,6 +26,7 @@ upload_files() {
 }
 
 pytest
+flake8 example_package
 make sphinx
 setup_git
 commit_website_files

@@ -13,6 +13,9 @@ Sphinx
 # Use for mocking in unit tests
 mock
 
+# Linting
+flake8
+
 # CLI Applications
 # click
 
