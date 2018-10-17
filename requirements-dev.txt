@@ -1,0 +1,20 @@
+# Unit tests
+pytest
+
+# Test code coverage
+pytest-cov
+
+# Load .env file into environment variables
+python-dotenv
+
+# Documentation generator
+Sphinx
+
+# Use for mocking in unit tests
+mock
+
+# CLI Applications
+# click
+
+# Rest API
+# Flask

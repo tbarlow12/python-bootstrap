@@ -1,0 +1,3 @@
+# See requirements-dev.txt for other good starter packages
+mock
+pytest
