@@ -64,11 +64,11 @@ PYPI_PASSWORD
 GITHUB_TOKEN
 ```
 
-###### Code validation
+#### Code validation
 
 As shown in [.travis.yml](.travis.yml), Travis will create a Python 3.6 virtual environment, install dependencies from [requirements-dev.txt](requirements-dev.txt), and then run `pytest` (unit tests) and `flake8` (Python PEP8 linting). The build will fail if any test fails or there is a PEP8 violation in the module.
 
-###### Publishing to PyPI and Test PyPI
+#### Publishing to PyPI and Test PyPI
 
 As shown in the [.travis.yml](.travis.yml), this project is set up to publish to Test PyPI when a git tag is applied to the repo. To create a tag from a commit, make sure everything is up to date in remote repo and run:
 
@@ -83,7 +83,7 @@ To instead publish to PyPI, simply remove the line that specifies `server:` in [
 
 This example project was published to [Test PyPI](https://test.pypi.org/project/bootstrap-example-package/)
 
-###### Publishing Documentation
+#### Publishing Documentation
 
 This repo is configured to have Travis CI generate and deploy the documentation via GitHub pages. Deployment will happen whenever there is a tag applied to a commit (as described above). To instead publish documentation on a commit to master, replace:
 
