@@ -8,7 +8,7 @@ Welcome to {Your Project Name}'s documentation!
 
 `GitHub Repo <https://github.com/tbarlow12/python-bootstrap>`_
   
-This is where you write your docs
+This is where you write your docs.
 
 .. toctree::
    :maxdepth: 1
