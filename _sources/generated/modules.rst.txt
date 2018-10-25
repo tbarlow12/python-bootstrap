@@ -1,7 +1,7 @@
-example_package
-===============
+bootstrap_example_package
+=========================
 
 .. toctree::
    :maxdepth: 4
 
-   example_package
+   bootstrap_example_package

@@ -1,0 +1,30 @@
+bootstrap\_example\_package package
+===================================
+
+Submodules
+----------
+
+bootstrap\_example\_package.adder module
+----------------------------------------
+
+.. automodule:: bootstrap_example_package.adder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bootstrap\_example\_package.multiplier module
+---------------------------------------------
+
+.. automodule:: bootstrap_example_package.multiplier
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bootstrap_example_package
+    :members:
+    :undoc-members:
+    :show-inheritance:
