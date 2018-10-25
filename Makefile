@@ -1,4 +1,4 @@
-package = ../example_package
+package = ../bootstrap_example_package
 
 sphinx:
 	cd docs && \
@@ -7,7 +7,7 @@ sphinx:
 	make html
 
 lint:
-	flake8 example_package
+	flake8 $(package)
 
 ghpages:
 	-git checkout gh-pages && \
