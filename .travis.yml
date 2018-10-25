@@ -2,11 +2,11 @@ language: python
 python:
   - '3.6'
 install:
-  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
 script:
   - pytest
   - make sphinx
-  - flake8 --ignore=F401 cloud_scanner
+  - flake8 --ignore=F401 example_package
 before_deploy:
   - make sphinx
   - pip install --upgrade setuptools wheel

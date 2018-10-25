@@ -28,14 +28,15 @@ This repo is set up to auto-generate documentation based on in-line comments in 
 
 ```python
 def sum(n, m):
-    '''
+    """
     This is a reStructuredText Docstring. If you document your code in this format,
     it will be easily picked up by Sphinx when you generate documentation.
     This method will return the value of `n` + `m`
-        :param n: First number to be added
-        :param m: Second number to be added
-        :return: n + m
-    '''
+    
+    :param n: First number to be added
+    :param m: Second number to be added
+    :return: n + m
+    """
     return n + m
 ```
 
@@ -51,8 +52,19 @@ The `docs/` directory contains an example set of documentation, but you'll proba
 ```
 Sphinx will then ask you a bunch of questions about your project. Most of them you'll probably be fine to just use the default value specified in the `[]`, some you'll want to specify and others don't provide a default value. [Here](markdown/sphinx.md) is my basic configuration just to get this project off the ground (blank answer means default value).
 
-From here, you can publish the docs page manually using `make sphinx && make ghpages` or let Travis do the work for you.
+From here, you can publish the docs page manually using `make sphinx && make ghpages` or let Travis CI do the work for you.
 
 ## CI/CD
 
-This repo is configured to have Travis CI generate and deploy the documentation via GitHub pages. After forking, make sure your repo is [configured to use Travis CI](https://github.com/apps/travis-ci/installations/new), and the `.travis.yml` will do the rest (run `pytest` and `flake8` validation, generate docs and deploy to `gh-pages` branch). 
+This repo is configured to have Travis CI generate and deploy the documentation via GitHub pages. After forking, make sure your repo is [configured to use Travis CI](https://github.com/apps/travis-ci/installations/new), and the `.travis.yml` will do the rest (run `pytest` and `flake8` validation, generate docs and deploy to `gh-pages` branch).
+
+## Other useful info
+
+#### Loading environment variables
+
+With a `.env` file that is ignored by Git, you can load environment variables into memory without committing them to source.
+
+```python
+from dotenv import load_dotenv
+load_dotenv()  # you can also pass a path if located in different directory
+```

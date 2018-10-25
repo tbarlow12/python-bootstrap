@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from mock import patch
 
-from example_package.example_module import Multiplier
+from example_package.multiplier import Multiplier
 
 
 class ExampleTest(TestCase):
