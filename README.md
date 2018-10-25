@@ -135,7 +135,8 @@ on:
    ```
 4. Upload distribution archives
    ```bash
-   (env) ~/python-bootstrap $ twine upload dist/*
+   # Change 'testpypi' to 'pypi' if targeting PyPI
+   (env) ~/python-bootstrap $ twine upload --repository testpypi dist/*
    ```
 
 #### Loading environment variables
