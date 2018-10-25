@@ -146,3 +146,17 @@ With a `.env` file that is ignored by Git, you can load environment variables in
 from dotenv import load_dotenv
 load_dotenv()  # you can also pass a path if located in different directory
 ```
+
+#### Installing from Test PyPI
+
+To install packages from [Test PyPI](https://test.pypi.org/), run:
+
+```bash
+pip install --index-url https://test.pypi.org/simple/ -r requirements-test.txt
+```
+
+If you have packages you need from both TestPyPI and PyPI, run:
+
+```bash
+pip install --index-url https://test.pypi.org/simple/ -r requirements-test.txt --extra-index-url https://pypi.org/simple/ -r requirements.txt
+```
