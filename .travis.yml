@@ -6,7 +6,7 @@ install:
 script:
   - pytest
   - make sphinx
-  - flake8 --ignore=F401 example_package
+  - flake8 example_package
 before_deploy:
   - make sphinx
   - pip install --upgrade setuptools wheel
@@ -18,8 +18,9 @@ deploy:
     github-token: $GITHUB_TOKEN
     keep-history: true
     on:
-      branch: master
+      tags: true
   - provider: pypi
+    server: https://testpypi.python.org/pypi # Remove for deployment to official PyPi repo
     skip_cleanup: true
     user: $PYPI_USERNAME
     password: $PYPI_PASSWORD

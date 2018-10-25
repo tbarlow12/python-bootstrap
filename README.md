@@ -45,10 +45,10 @@ Learn more about the format [here](https://www.python.org/dev/peps/pep-0257/).
 The `docs/` directory contains an example set of documentation, but you'll probably want to make your own since setup requires some project-specific information. To create your own set of documentation, run the following from the root directory of project:
 
 ```bash
-~/python-bootstrap $ rm -rf docs
-~/python-bootstrap $ mkdir docs
-~/python-bootstrap $ cd docs
-~/python-bootstrap/docs $ sphinx-quickstart
+(env) ~/python-bootstrap $ rm -rf docs
+(env) ~/python-bootstrap $ mkdir docs
+(env) ~/python-bootstrap $ cd docs
+(env) ~/python-bootstrap/docs $ sphinx-quickstart
 ```
 Sphinx will then ask you a bunch of questions about your project. Most of them you'll probably be fine to just use the default value specified in the `[]`, some you'll want to specify and others don't provide a default value. [Here](markdown/sphinx.md) is my basic configuration just to get this project off the ground (blank answer means default value).
 
@@ -56,9 +56,84 @@ From here, you can publish the docs page manually using `make sphinx && make ghp
 
 ## CI/CD
 
-This repo is configured to have Travis CI generate and deploy the documentation via GitHub pages. After forking, make sure your repo is [configured to use Travis CI](https://github.com/apps/travis-ci/installations/new), and the `.travis.yml` will do the rest (run `pytest` and `flake8` validation, generate docs and deploy to `gh-pages` branch).
+After forking, make sure your repo is [configured to use Travis CI](https://github.com/apps/travis-ci/installations/new). Set following environment variables in Travis with appropriate values:
+
+```
+PYPI_USERNAME
+PYPI_PASSWORD
+GITHUB_TOKEN
+```
+
+###### Code validation
+
+As shown in [.travis.yml](.travis.yml), Travis will create a Python 3.6 virtual environment, install dependencies from [requirements-dev.txt](requirements-dev.txt), and then run `pytest` (unit tests) and `flake8` (Python PEP8 linting). The build will fail if any test fails or there is a PEP8 violation in the module.
+
+###### Publishing to PyPI and Test PyPI
+
+As shown in the [.travis.yml](.travis.yml), this project is set up to publish to Test PyPI when a git tag is applied to the repo. To create a tag from a commit, make sure everything is up to date in remote repo and run:
+
+```bash
+# If tagging previous commit: $ git checkout <commit-id>
+(env) ~/python-bootstrap $ git tag 0.0.1 # make sure version matches setup.py
+(env) ~/python-bootstrap $ git push origin --tags
+```
+
+To instead publish to PyPI, simply remove the line that specifies `server:` in [.travis.yml](.travis.yml) and make sure the `PYPI_USERNAME` and `PYPI_PASSWORD` variables are up to date in Travis.
+
+###### Publishing Documentation
+
+This repo is configured to have Travis CI generate and deploy the documentation via GitHub pages. Deployment will happen whenever there is a tag applied to a commit (as described above). To instead publish documentation on a commit to master, replace:
+
+```
+on:
+    tags: true
+```
+
+with
+
+```
+on:
+    branch: master
+```
+
+
+
+
 
 ## Other useful info
+
+#### Manually Publishing to PyPI and TestPyPI
+
+1. Add file `~/.pypirc` in the format:
+
+    ```yaml
+    [distutils]
+    index-servers=
+        testpypi
+        pypi
+
+    [testpypi]
+    repository = https://test.pypi.org/legacy/
+    username = {test-pypi-username}
+    password = {test-pypi-password}
+
+    [pypi]
+    repository = https://upload.pypi.org/legacy/
+    username = {pypi-username}
+    password = {pypi-password}
+    ```
+2. Install Setup Tools
+   ```bash
+   (env) ~/python-bootstrap $ pip install -U twine
+   ```
+3. Generate distribution archives
+   ```bash
+   (env) ~/python-bootstrap $ python setup.py sdist bdist_wheel
+   ```
+4. Upload distribution archives
+   ```bash
+   (env) ~/python-bootstrap $ twine upload dist/*
+   ```
 
 #### Loading environment variables
 
