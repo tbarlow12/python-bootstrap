@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from mock import patch
 
-from example_package.adder import Adder
+from bootstrap_example_package.adder import Adder
 
 
 class ExampleTest2(TestCase):
