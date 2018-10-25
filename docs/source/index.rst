@@ -7,6 +7,7 @@ Welcome to {Your Project Name}'s documentation!
 ==================================================
 
 `GitHub Repo <https://github.com/tbarlow12/python-bootstrap>`_
+`Test PyPI Package <https://test.pypi.org/project/bootstrap-example-package/>`_
   
 This is where you write your docs.
 
