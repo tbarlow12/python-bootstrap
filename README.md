@@ -73,12 +73,15 @@ As shown in [.travis.yml](.travis.yml), Travis will create a Python 3.6 virtual 
 As shown in the [.travis.yml](.travis.yml), this project is set up to publish to Test PyPI when a git tag is applied to the repo. To create a tag from a commit, make sure everything is up to date in remote repo and run:
 
 ```bash
+(env) ~/python-bootstrap (master) $ git pull
 # If tagging previous commit: $ git checkout <commit-id>
-(env) ~/python-bootstrap $ git tag 0.0.1 # make sure version matches setup.py
-(env) ~/python-bootstrap $ git push origin --tags
+(env) ~/python-bootstrap (master) $ git tag 0.0.1 # make sure version matches setup.py
+(env) ~/python-bootstrap (master) $ git push origin --tags
 ```
 
 To instead publish to PyPI, simply remove the line that specifies `server:` in [.travis.yml](.travis.yml) and make sure the `PYPI_USERNAME` and `PYPI_PASSWORD` variables are up to date in Travis.
+
+This example project was published to [Test PyPI](https://test.pypi.org/project/bootstrap-example-package/)
 
 ###### Publishing Documentation
 
