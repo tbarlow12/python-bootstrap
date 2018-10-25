@@ -6,7 +6,7 @@ install:
 script:
   - pytest
   - make sphinx
-  - flake8 example_package
+  - flake8 bootstrap_example_package
 before_deploy:
   - make sphinx
   - pip install --upgrade setuptools wheel
