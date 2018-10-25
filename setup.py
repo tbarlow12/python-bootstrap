@@ -6,7 +6,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname), encoding='utf-8').read()
 
 setup(name='bootstrap_example_package',
-      version='0.0.1',
+      version='0.0.2',
       description='Python Bootstrap Project',
       long_description=read('README.md'),
       url='https://github.com/tbarlow12/python-bootstrap',
