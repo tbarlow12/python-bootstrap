@@ -18,7 +18,6 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="example_package.example_module package" href="example_package.example_module.html" />
     <link rel="prev" title="example_package" href="modules.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -30,9 +29,6 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="example_package.example_module.html" title="example_package.example_module package"
-             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="example_package"
              accesskey="P">previous</a> |</li>
@@ -48,30 +44,114 @@
             
   <div class="section" id="example-package-package">
 <h1>example_package package<a class="headerlink" href="#example-package-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="example_package.example_module.html">example_package.example_module package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module.html#module-example_package.example_module.multiplier">example_package.example_module.multiplier module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module.html#module-example_package.example_module">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="example_package.example_module_2.html">example_package.example_module_2 package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module_2.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module_2.html#module-example_package.example_module_2.adder">example_package.example_module_2.adder module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example_package.example_module_2.html#module-example_package.example_module_2">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-example_package.settings">
-<span id="example-package-settings-module"></span><h2>example_package.settings module<a class="headerlink" href="#module-example_package.settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-example_package.adder">
+<span id="example-package-adder-module"></span><h2>example_package.adder module<a class="headerlink" href="#module-example_package.adder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="example_package.adder.Adder">
+<em class="property">class </em><code class="descclassname">example_package.adder.</code><code class="descname">Adder</code><a class="headerlink" href="#example_package.adder.Adder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is an example class with static methods to add various values</p>
+<dl class="staticmethod">
+<dt id="example_package.adder.Adder.plus_three">
+<em class="property">static </em><code class="descname">plus_three</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#example_package.adder.Adder.plus_three" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a reStructuredText Docstring. If you document your code
+in this format, it will be easily picked up by Sphinx when you
+generate documentation.
+This method will return the value of <cite>n</cite> + 3</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param n:</th><td class="field-body">The number to be multiplied by 3</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">n + 3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="example_package.adder.Adder.sum">
+<em class="property">static </em><code class="descname">sum</code><span class="sig-paren">(</span><em>n</em>, <em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#example_package.adder.Adder.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a reStructuredText Docstring. If you document your code
+in this format, it will be easily picked up by Sphinx when you
+generate documentation.
+This method will return the value of <cite>n</cite> + <cite>m</cite></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param n:</th><td class="field-body">First number to be added</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param m:</th><td class="field-body">Second number to be added</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">n + m</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-example_package.multiplier">
+<span id="example-package-multiplier-module"></span><h2>example_package.multiplier module<a class="headerlink" href="#module-example_package.multiplier" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="example_package.multiplier.Multiplier">
+<em class="property">class </em><code class="descclassname">example_package.multiplier.</code><code class="descname">Multiplier</code><a class="headerlink" href="#example_package.multiplier.Multiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is an example class with static methods to multiply by various values</p>
+<dl class="staticmethod">
+<dt id="example_package.multiplier.Multiplier.times_three">
+<em class="property">static </em><code class="descname">times_three</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#example_package.multiplier.Multiplier.times_three" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a reStructuredText Docstring. If you document your code
+in this format, it will be easily picked up by Sphinx when you
+generate documentation.
+This method will return the value of <cite>n</cite> multiplied by 3</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param n:</th><td class="field-body">The number to be multiplied by 3</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">n * 3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="example_package.multiplier.Multiplier.times_two">
+<em class="property">static </em><code class="descname">times_two</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#example_package.multiplier.Multiplier.times_two" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a reStructuredText Docstring. If you document your code
+in this format, it will be easily picked up by Sphinx when you
+generate documentation.
+This method will return the value of <cite>n</cite> multiplied by 2</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param n:</th><td class="field-body">The number to be multiplied by 2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">return:</th><td class="field-body">n * 2</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-example_package">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-example_package" title="Permalink to this headline">¶</a></h2>
@@ -87,9 +167,9 @@
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">example_package package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-example_package.settings">example_package.settings module</a></li>
+<li><a class="reference internal" href="#module-example_package.adder">example_package.adder module</a></li>
+<li><a class="reference internal" href="#module-example_package.multiplier">example_package.multiplier module</a></li>
 <li><a class="reference internal" href="#module-example_package">Module contents</a></li>
 </ul>
 </li>
@@ -98,9 +178,6 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="modules.html"
                         title="previous chapter">example_package</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="example_package.example_module.html"
-                        title="next chapter">example_package.example_module package</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -133,9 +210,6 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="example_package.example_module.html" title="example_package.example_module package"
-             >next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="example_package"
              >previous</a> |</li>

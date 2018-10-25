@@ -1,0 +1,30 @@
+example\_package package
+========================
+
+Submodules
+----------
+
+example\_package.adder module
+-----------------------------
+
+.. automodule:: example_package.adder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+example\_package.multiplier module
+----------------------------------
+
+.. automodule:: example_package.multiplier
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: example_package
+    :members:
+    :undoc-members:
+    :show-inheritance:
