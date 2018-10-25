@@ -1,9 +1,9 @@
-packages = ../example_package
+package = ../example_package
 
 sphinx:
 	cd docs && \
 	make clean && \
-	sphinx-apidoc -f -o source/generated $(packages) && \
+	sphinx-apidoc -f -o source/generated $(package) && \
 	make html
 
 lint:

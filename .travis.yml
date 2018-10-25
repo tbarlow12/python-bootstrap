@@ -1,6 +1,28 @@
 language: python
 python:
-  - "3.6"
+  - '3.6'
 install:
-  - pip install -r requirements-dev.txt
-script: sh build.sh
+  - pip install -r requirements.txt
+script:
+  - pytest
+  - make sphinx
+  - flake8 --ignore=F401 cloud_scanner
+before_deploy:
+  - make sphinx
+  - pip install --upgrade setuptools wheel
+  - python setup.py sdist bdist_wheel  
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    local-dir: docs/build/html
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    on:
+      branch: master
+  - provider: pypi
+    skip_cleanup: true
+    user: $PYPI_USERNAME
+    password: $PYPI_PASSWORD
+    distributions: "sdist bdist_wheel"
+    on:
+      tags: true
